@@ -2,6 +2,7 @@
 
 #Get the necessary components
 apt-get update
+apt-get upgrade -y
 apt-get install lxde-core lxterminal tigervnc-standalone-server tigervnc-common chromium-browser leafpad chromium-sandbox --no-install-recommends -y 
 apt-get clean
 
