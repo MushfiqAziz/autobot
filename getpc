@@ -72,10 +72,10 @@ else
 fi
 EOM
 
-echo "fixing shebang of $bin"
-termux-fix-shebang $bin
+mv start-kali.sh pc
+termux-fix-shebang pc
 echo "making $bin executable"
-chmod +x $bin
+chmod +x pc
 echo "removing image for some space"
 rm $tarball
-echo "You can now launch Kali with the ./${bin} script"
+bash pc
