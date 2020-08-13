@@ -3,7 +3,8 @@
 #Get the necessary components
 apt-get update
 apt-get upgrade -y
-apt-get install lxde-core lxterminal tigervnc-standalone-server tigervnc-common chromium-browser leafpad --no-install-recommends -y 
+apt-get install lxde-core lxterminal --no-install-recommends -y 
+apt-get install tigervnc chromium firefox-esr leafpad
 apt-get clean
 
 #Setup the necessary files
