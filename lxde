@@ -5,7 +5,7 @@ apt update
 apt full-upgrade -y
 apt autoremove
 apt install lxde-core lxterminal --no-install-recommends -y 
-apt install tigervnc-standalone-server tigervnc-common chromium chromium-sandbox firefox-esr leafpad --no-install-recommends -y
+apt install tigervnc-standalone-server tigervnc-common firefox-esr leafpad --no-install-recommends -y
 
 #Setup the necessary files
 mkdir ~/.vnc
