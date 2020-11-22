@@ -20,6 +20,6 @@ chmod +x /usr/local/bin/stop-pc
 echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
 
-rm /etc/xdg/autostart/lxpolkit.desktop
+#rm /etc/xdg/autostart/lxpolkit.desktop
     
-mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
+#mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
