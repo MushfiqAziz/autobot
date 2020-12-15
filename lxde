@@ -1,27 +1,19 @@
 #!/bin/bash
-
 #Get the necessary components
 apt update
 apt full-upgrade -y
 apt autoremove
-apt install lxde tigervnc-standalone-server tigervnc-common firefox-esr mousepad chromium chromium-sandbox libreoffice
-
+apt install lxde tigervnc-standalone-server tigervnc-common chromium firefox-esr libreoffice mousepad -y
 #Setup the necessary files
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/LXDE/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/start-pc -P /usr/local/bin/
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/stop-pc -P /usr/local/bin/
-
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/start-pc
 chmod +x /usr/local/bin/stop-pc
-
-
 echo "export DISPLAY=":1"" >> /etc/profile
 source /etc/profile
-
-rm /etc/xdg/autostart/lxpolkit.desktop
-    
+rm /etc/xdg/autostart/lxpolkit.desktop  
 mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
-
 rm lxde
