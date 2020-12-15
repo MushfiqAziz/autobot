@@ -4,7 +4,7 @@
 apt update
 apt full-upgrade -y
 apt autoremove
-apt install lxde tigervnc-standalone-server tigervnc-common firefox-esr mousepad chromium chromium-sandbox libreoffice -y --no-confirm
+apt install lxde tigervnc-standalone-server tigervnc-common firefox-esr mousepad chromium chromium-sandbox libreoffice
 
 #Setup the necessary files
 mkdir ~/.vnc
