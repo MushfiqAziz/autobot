@@ -23,3 +23,5 @@ source /etc/profile
 rm /etc/xdg/autostart/lxpolkit.desktop
     
 mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
+
+rm lxde
