@@ -73,7 +73,7 @@ fi
 EOM
 
 mv start-ubuntu.sh v
-termux-fix-shebang pc
+termux-fix-shebang v
 echo "making $bin executable"
 chmod +x v
 echo "removing image for some space"
