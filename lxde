@@ -3,7 +3,7 @@
 apt update
 apt full-upgrade -y
 apt autoremove
-apt install lxde tigervnc-standalone-server tigervnc-common chromium firefox-esr libreoffice mousepad -y
+apt install lxde tigervnc-standalone-server tigervnc-common chromium-browser firefox libreoffice leafpad -y
 #Setup the necessary files
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/LXDE/xstartup -P ~/.vnc/
@@ -17,3 +17,5 @@ source /etc/profile
 rm /etc/xdg/autostart/lxpolkit.desktop  
 mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 rm lxde
+mv /usr/local/bin/start-pc von
+mv /usr/local/bin/stop-pc voff
