@@ -1,0 +1,5 @@
+#!/bin/bash
+xrdb $HOME/.Xresources
+startlxde &
+dbus-launch &
+ibus-daemon &
