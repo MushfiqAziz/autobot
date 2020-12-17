@@ -12,10 +12,10 @@ wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/stop-pc -P /us
 chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/start-pc
 chmod +x /usr/local/bin/stop-pc
-echo "export DISPLAY=":1"" >> /etc/profile
+echo "export DISPLAY=":0"" >> /etc/profile
 source /etc/profile
 rm /etc/xdg/autostart/lxpolkit.desktop  
 mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
 rm lxde
-mv /usr/local/bin/start-pc von
-mv /usr/local/bin/stop-pc voff
+mv /usr/local/bin/start-pc /usr/local/bin/von
+mv /usr/local/bin/stop-pc /usr/local/bin/voff
