@@ -6,7 +6,7 @@ apt autoremove
 apt install lxde tigervnc-standalone-server tigervnc-common chromium firefox-esr libreoffice mousepad ibus ibus-m17n dbus-x11 sudo nano wget -y
 #Setup the necessary files
 mkdir ~/.vnc
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Scripts/DesktopEnvironment/Apt/LXDE/xstartup -P ~/.vnc/
+wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/xstartup -P ~/.vnc/
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/start-pc -P /usr/local/bin/
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/stop-pc -P /usr/local/bin/
 chmod +x ~/.vnc/xstartup
