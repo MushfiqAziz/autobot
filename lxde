@@ -5,7 +5,7 @@ echo "deb-src http://ports.ubuntu.com/ubuntu-ports bionic-updates main restricte
 apt update
 apt full-upgrade -y
 apt autoremove
-apt install lxde tigervnc-standalone-server tigervnc-common chromium-browser firefox libreoffice leafpad ibus ibus-m17n dbus-x11 sudo nano wget --no-install-recommends -y
+apt install lxde-core lxterminal tigervnc-standalone-server tigervnc-common chromium-browser libreoffice leafpad ibus ibus-m17n dbus-x11 sudo nano wget -y
 #Setup the necessary files
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/xstartup -P ~/.vnc/
