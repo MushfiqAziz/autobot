@@ -2,7 +2,6 @@
 #Get the necessary components
 echo "deb http://ports.ubuntu.com/ubuntu-ports bionic-updates main restricted universe multiverse" >> /etc/apt/sources.list
 echo "deb-src http://ports.ubuntu.com/ubuntu-ports bionic-updates main restricted universe multiverse" >> /etc/apt/sources.list
-wget https://raw.githubusercontent.com/EXALAB/AnLinux-Resources/master/Library/Ashmem/aarch64/libandroid-shmem.so -P /usr/local/lib
 apt update
 apt full-upgrade -y
 apt autoremove
