@@ -78,5 +78,5 @@ echo "making $bin executable"
 chmod +x v
 echo "removing image for some space"
 rm $tarball
-rm getpc
+rm getlinux
 bash v
