@@ -79,17 +79,17 @@ wget "https://raw.githubusercontent.com/Techriz/AndronixOrigin/master/Installer/
 rm -rf arch-fs/root/.bash_profile
 
 
-wget $dlink/lxde_de.sh -O $folder/root/lxde_de.sh
+wget $dlink/lxqt_de.sh -O $folder/root/lxqt_de.sh
 echo " #!/bin/bash
 bash ~/additional.sh
 pacman -Syyuu --noconfirm && pacman -S wget sudo --noconfirm 
 mkdir -p ~/.vnc
 clear
 if [ ! -f /root/xfce4_de.sh ]; then
-    wget --tries=20 $dlink/lxde_de.sh -O /root/lxde_de.sh
-    bash ~/lxde_de.sh
+    wget --tries=20 $dlink/lxqt_de.sh -O /root/lxqt_de.sh
+    bash ~/lxqt_de.sh
 else
-    bash ~/lxde_de.sh
+    bash ~/lxqt_de.sh
 fi
 clear
 if [ ! -f /usr/local/bin/vncserver-start ]; then
