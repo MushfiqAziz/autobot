@@ -1,5 +1,5 @@
 #!/bin/bash
 xrdb $HOME/.Xresources
-startlxqt &
 dbus-launch &
 ibus-daemon &
+startlxqt &
