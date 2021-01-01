@@ -2,4 +2,4 @@
 xrdb $HOME/.Xresources
 dbus-launch &
 ibus-daemon &
-startlxqt &
+startlxde &
