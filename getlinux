@@ -57,6 +57,7 @@ command+=" -b ubuntu-fs/root:/dev/shm"
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
 command+=" -b /sdcard"
+#command+=" -b /storage/your_sdcard_name
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
@@ -71,7 +72,6 @@ else
     \$command -c "\$com"
 fi
 EOM
-
 mv start-ubuntu.sh v
 termux-fix-shebang v
 echo "making $bin executable"
