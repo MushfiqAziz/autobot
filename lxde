@@ -1,7 +1,7 @@
 #!/bin/bash
 #Get the necessary components
-apt install lxde-core --no-install-recommends
-apt install tigervnc-standalone-server chromium-browser libreoffice ibus-m17n dbus-x11 sudo nano fonts-beng lxterminal leafpad -y
+apt install lxde-core --no-install-recommends -y
+apt install tigervnc-standalone-server ibus-m17n dbus-x11 sudo nano fonts-beng lxterminal leafpad -y
 #Setup the necessary files
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/xstartup -P ~/.vnc/
