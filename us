@@ -5,3 +5,4 @@ echo "deb http://deb.debian.org/debian buster-updates main contrib non-free" >> 
 apt update
 apt full-upgrade -y
 rm us
+#wtf
