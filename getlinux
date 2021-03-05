@@ -4,13 +4,13 @@ if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="debian-rootfs-arm64.tar.xz"
+tarball="debian-rootfs-armhf.tar.xz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
 		case `dpkg --print-architecture` in
 		aarch64)
-			archurl="arm64" ;;
+			archurl="armhf" ;;
 		arm)
 			archurl="armhf" ;;
 		amd64)
@@ -24,7 +24,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://github.com/EXALAB/Anlinux-Resources/blob/master/Rootfs/Debian/arm64/debian-rootfs-arm64.tar.xz?raw=true" -O $tarball
+		wget "https://github.com/EXALAB/Anlinux-Resources/blob/master/Rootfs/Debian/armhf/debian-rootfs-armhf.tar.xz?raw=true" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
