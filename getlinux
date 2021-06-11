@@ -4,7 +4,7 @@ if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="ubuntu-rootfs-armhf.tar.xz"
+tarball="ubuntu-rootfs-arm64.tar.gz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
@@ -24,7 +24,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://github.com/EXALAB/Anlinux-Resources/blob/master/Experimental/ubuntu-rootfs-arm64.tar.xz?raw=true" -O $tarball
+		wget "https://github.com/MushfiqAziz/autobot/blob/master/ubuntu-rootfs-arm64.tar.gz?raw=true" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
