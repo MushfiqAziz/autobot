@@ -11,6 +11,7 @@ chmod +x ~/.vnc/xstartup
 chmod +x /usr/local/bin/start-pc
 chmod +x /usr/local/bin/stop-pc
 echo "export DISPLAY=":0"" >> /etc/profile
+echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
 source /etc/profile
 rm /etc/xdg/autostart/lxpolkit.desktop  
 mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
