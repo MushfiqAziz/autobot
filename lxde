@@ -1,6 +1,6 @@
 #!/bin/bash
 #Get the necessary components
-apt install lxde --no-install-recommends -y
+apt install lxqt --no-install-recommends -y
 apt install tigervnc-standalone-server tigervnc-common nano
 #Setup the necessary files
 mkdir ~/.vnc
