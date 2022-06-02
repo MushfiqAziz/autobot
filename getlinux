@@ -57,7 +57,7 @@ command+=" -b debian-fs/root:/dev/shm"
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
 command+=" -b /sdcard"
-#command+=" -b /storage/sdcard_name
+command+=" -b /storage/1657-6135"
 command+=" -w /root"
 command+=" /usr/bin/env -i"
 command+=" HOME=/root"
