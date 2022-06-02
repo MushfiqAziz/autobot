@@ -1,4 +1,4 @@
 #!/bin/bash
 xrdb $HOME/.Xresources
-dbus-launch &
-startlxde &
+dbus-launch --exit-with-x11 &
+startlxqt &
