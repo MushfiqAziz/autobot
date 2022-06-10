@@ -1,10 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
-folder=ubuntu-fs
+folder=kali-fs
 if [ -d "$folder" ]; then
 	first=1
 	echo "skipping downloading"
 fi
-tarball="ubuntu-rootfs-arm64.tar.xz"
+tarball="kalifs-arm64-nano.tar.xz"
 if [ "$first" != 1 ];then
 	if [ ! -f $tarball ]; then
 		echo "Download Rootfs, this may take a while base on your internet speed."
@@ -30,11 +30,11 @@ if [ "$first" != 1 ];then
 	mkdir -p "$folder"
 	cd "$folder"
 	echo "Decompressing Rootfs, please be patient."
-	proot --link2symlink tar -xvf ${cur}/${tarball}||:
+	proot --link2symlink tar -xzf ${cur}/${tarball}||:
 	cd "$cur"
 fi
-mkdir -p ubuntu-binds
-bin=start-ubuntu.sh
+mkdir -p kali-binds
+bin=start-kali.sh
 echo "writing launch script"
 cat > $bin <<- EOM
 #!/bin/bash
@@ -45,14 +45,14 @@ command="proot"
 command+=" --link2symlink"
 command+=" -0"
 command+=" -r $folder"
-if [ -n "\$(ls -A ubuntu-binds)" ]; then
-    for f in ubuntu-binds/* ;do
+if [ -n "\$(ls -A kali-binds)" ]; then
+    for f in kali-binds/* ;do
       . \$f
     done
 fi
 command+=" -b /dev"
 command+=" -b /proc"
-command+=" -b ubuntu-fs/root:/dev/shm"
+command+=" -b kali-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
@@ -72,7 +72,7 @@ else
     \$command -c "\$com"
 fi
 EOM
-mv start-ubuntu.sh v
+mv start-kali.sh v
 termux-fix-shebang v
 echo "making $bin executable"
 chmod +x v
