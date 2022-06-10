@@ -24,7 +24,7 @@ if [ "$first" != 1 ];then
 		*)
 			echo "unknown architecture"; exit 1 ;;
 		esac
-		wget "https://github.com/EXALAB/Anlinux-Resources/blob/master/Rootfs/Ubuntu/arm64/ubuntu-rootfs-arm64.tar.xz?raw=true" -O $tarball
+		wget "https://kali.download/nethunter-images/current/rootfs/kalifs-arm64-nano.tar.xz" -O $tarball
 	fi
 	cur=`pwd`
 	mkdir -p "$folder"
