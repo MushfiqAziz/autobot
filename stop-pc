@@ -1,5 +1,5 @@
 export USER=root
-export HOME=/root
+export HOME=/home
 
 vncserver -kill :0
 rm -rf /tmp/.X0-lock
