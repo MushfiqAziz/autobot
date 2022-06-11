@@ -1,4 +1,4 @@
 export USER=root
-export HOME=/root
+export HOME=/home
 
-vncserver -geometry 1420x720 -depth 16 -name remote-desktop :0
+vncserver -geometry 1420x720 -depth 16 -name remote-desktop :1
