@@ -1,7 +1,8 @@
 #!/bin/bash
 #Get the necessary components
+apt install dbus-x11 -y
 apt install lxde --no-install-recommends -y
-apt install tigervnc-standalone-server tigervnc-common nano
+apt install tigervnc-standalone-server tigervnc-common nano pulseaudio -y 
 #Setup the necessary files
 mkdir ~/.vnc
 wget https://raw.githubusercontent.com/MushfiqAziz/autobot/master/xstartup -P ~/.vnc/
