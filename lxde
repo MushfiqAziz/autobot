@@ -14,8 +14,8 @@ chmod +x /usr/local/bin/stop-pc
 echo "export DISPLAY=":1"" >> /etc/profile
 echo "export PULSE_SERVER=127.0.0.1" >> /etc/profile
 source /etc/profile
-#rm /etc/xdg/autostart/lxpolkit.desktop  
-#mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
-#rm lxde
+rm /etc/xdg/autostart/lxpolkit.desktop  
+mv /usr/bin/lxpolkit /usr/bin/lxpolkit.bak
+rm lxde
 mv /usr/local/bin/start-pc /usr/local/bin/von
 mv /usr/local/bin/stop-pc /usr/local/bin/voff
